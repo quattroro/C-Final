@@ -6,12 +6,12 @@ public class BaseNode : MonoBehaviour
 {
     Vector2Int Index;
 
-    public bool _isactive;
-    public bool _isclicked;
+    private bool _isactive;//활성노드 / 비활성 노드
+    private bool _isclicked;//클릭된상태 / 클릭되지 않은 상태
 
-    public RectTransform rectTransform;
+    public RectTransform rectTransform;//자기 자신의 recttransform
 
-    public BaseSlot SettedSlot;
+    public BaseSlot SettedSlot;//노드가 셋팅되어 있는 슬롯
 
     public BaseSlot PreSlot;//노드가 클릭되어서 마우스를 따라다닐때 원래 있던 슬롯의 위치를 저장해 놓는다.
 
@@ -72,6 +72,12 @@ public class BaseNode : MonoBehaviour
 
         return temp;
     }
+    //아이템 크기를 리턴
+    public virtual Vector2Int GetSize()
+    {
+        return Vector2Int.zero;
+    }
+
     //해당 아이템을 하나 떼어내서 리턴해준다.
     public virtual BaseNode GetDuplicateNode()
     {

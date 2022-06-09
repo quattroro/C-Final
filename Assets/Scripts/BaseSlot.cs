@@ -33,6 +33,18 @@ public class BaseSlot : MonoBehaviour
         node.SettedSlot = this;
         this.SettingNode = node;
     }
+
+    //해당 슬롯에 세팅할 노드와 노드의 크기를 넣어주면 해당 크기만큼 아이템을 세팅해준다.
+    public virtual void SetNode(BaseNode node, Vector2Int size)
+    {
+
+
+
+
+
+
+    }
+
     //슬롯에 어떠한 아이템이 삽입되었을떄 실행될 이벤트
     public virtual void InsertEvent(InsertSlotEvent _event)
     {

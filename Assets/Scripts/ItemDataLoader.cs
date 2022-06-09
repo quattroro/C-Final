@@ -11,7 +11,7 @@ public class ItemDataLoader : Singleton<ItemDataLoader>
     //public List<BaseNode> itemnodes = new List<BaseNode>();
     public Sprite[] sprites = null;
 
-    Dictionary<int, Dictionary<int, string>> iteminfos;
+    public Dictionary<int, Dictionary<int, string>> iteminfos;
 
     public Dictionary<int,Dictionary<int, string>> ItemFileOpen(string filepath)
     {
@@ -58,7 +58,7 @@ public class ItemDataLoader : Singleton<ItemDataLoader>
             //string temp;
             for (int i = 0; i < str.Length; i++)
             {
-                if (str[i] == '{')
+                if (str[i] == '"'&&flag ==false)
                 {
                     flag = true;//여는중괄호가 나오면 닫는중괄호가 나올때까지 앞으로 나오는 , 는 그냥 집어넣는다.  
                     continue;
@@ -79,7 +79,7 @@ public class ItemDataLoader : Singleton<ItemDataLoader>
                 }
                 else if (i == str.Length - 1)//받아온 한 줄의 마지막 문자일때도 쉼표과 같은 동작을 해준다.
                 {
-                    if (str[i] != '}')//만약 마지막이 } 로 끝났을때는 }문자는 넣어주지 않는다.
+                    if (str[i] != '"')//만약 마지막이 " 로 끝났을때는 "문자는 넣어주지 않는다.
                         temp[index++] = str[i];
 
                     temp[index] = '\0';
@@ -90,7 +90,7 @@ public class ItemDataLoader : Singleton<ItemDataLoader>
                     index = 0;
                     break;
                 }
-                else if (str[i] == '}')
+                else if (str[i] == '"'&&flag==true)
                 {
                     flag = false;
                     continue;
@@ -106,6 +106,9 @@ public class ItemDataLoader : Singleton<ItemDataLoader>
 
             if (int.TryParse(columsdic[0], out code))//첫번째가 숫자가 아니면 해당 행은 열제목 행이다. 리스트에 넣지 않는다.
             {
+                //Debug.Log($"{code}번 아이템 삽입");
+                //Debug.Log(columsdic[1]+"/" + columsdic[2]);
+                //Debug.Log(columsdic[2]);
                 data.Add(code, columsdic);
             }
             else
@@ -233,6 +236,7 @@ public class ItemDataLoader : Singleton<ItemDataLoader>
     {
         string temppath = Application.streamingAssetsPath + FilePath;//런타임중 읽기만 가능
         ItemFileOpen(temppath);
+        //Debug.Log(iteminfos[1001][(int)EnumTypes.ItemCollums.Damage]);
         //ItemInfo_Road(FilePath);
     }
 

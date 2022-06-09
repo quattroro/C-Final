@@ -5,19 +5,20 @@ using UnityEngine.UI;
 
 public class ItemNode : BaseNode
 {
-    public string itemName;
-    public int itemCode;
-    public Sprite itemSprite;
+    public string itemName;//아이템 이름
+    public int itemCode;//아이템 코드
+    public Sprite itemSprite;//아이템 이미지
 
-    public Vector2Int itemsize;
+    public Vector2Int itemsize;//아이템이 인벤토리창에서 차지하는 크기
 
-    public int _Stack;
+    public int _Stack;//아이템 개수
 
-    public bool _isstackable = false;
+    public bool _isstackable = false;//해당 아이템이 스택이 가능한 아이템인지 여부
 
-    public EnumTypes.ItemTypes itemtype;
+    public EnumTypes.ItemTypes itemtype;//아이템 타입
+    public EnumTypes.EquipmentTypes equiptype;//장착 부위 
 
-    public Text stacktext;
+    public Text stacktext;//개수 표시 텍스트
 
     public override void Awake()
     {
@@ -130,6 +131,11 @@ public class ItemNode : BaseNode
         return itemCode;
     }
 
+    //아이템 크기를 리턴
+    public override Vector2Int GetSize()
+    {
+        return itemsize;
+    }
     //아이템이 클릭되었을땐 마우스를 따라다니게 해준다.
     public override void Update()
     {
