@@ -29,6 +29,21 @@ public class EnumTypes
         Equips,
         TypeMax
     }
+    
+
+    public enum EquipmentTypes
+    {
+        Head,
+        Body,
+        RightArm,
+        LeftArm,
+        TwoHand,
+        Amulet,
+        Ring1,
+        Ring2,
+        EquipMax
+    }
+
 
     public enum RecipeCollums
     {
