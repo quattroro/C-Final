@@ -14,7 +14,7 @@ public class ItemBag : Singleton<ItemBag>
     private int QuickInvectoryNum = 8;
     public Vector2 QuickSlotInterval;
 
-    public BaseSlot EquipSlot;
+    //public BaseSlot EquipSlot;
     public BaseSlot InventorySlot;
     public BaseSlot QuickSlot;
 

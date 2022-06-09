@@ -9,6 +9,8 @@ public class ItemNode : BaseNode
     public int itemCode;
     public Sprite itemSprite;
 
+    public Vector2Int itemsize;
+
     public int _Stack;
 
     public bool _isstackable = false;

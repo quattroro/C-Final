@@ -8,10 +8,17 @@ public class EnumTypes
     public enum ItemCollums
     {
         ItemCode,
-        ItemName,
-        ResourceName,
-        ResourceIndex,
-        ItemType,
+        Name,
+        Damage,
+        Durability,
+        StrRequire,
+        DexRequire,
+        Price,
+        Category,
+        Parts,
+        Grade,
+        SpriteNum,
+        Size,
         CollumMax
     }
 
@@ -25,8 +32,8 @@ public class EnumTypes
 
     public enum ItemTypes
     {
-        StackAble,
-        Equips,
+        Equips = 1000 ,
+        StackAble = 2000,
         TypeMax
     }
     
@@ -39,8 +46,7 @@ public class EnumTypes
         LeftArm,
         TwoHand,
         Amulet,
-        Ring1,
-        Ring2,
+        Ring,
         EquipMax
     }
 
@@ -61,4 +67,6 @@ public class EnumTypes
         Slot9,
         CollumMax
     }
+
+    
 }
