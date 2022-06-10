@@ -12,6 +12,8 @@ public class BaseNode : MonoBehaviour
     public RectTransform rectTransform;//자기 자신의 recttransform
 
     public BaseSlot SettedSlot;//노드가 셋팅되어 있는 슬롯
+    public List<BaseSlot> SettedSlotList;//노드가 셋팅되어 있는 슬롯들
+
 
     public BaseSlot PreSlot;//노드가 클릭되어서 마우스를 따라다닐때 원래 있던 슬롯의 위치를 저장해 놓는다.
 
@@ -20,6 +22,11 @@ public class BaseNode : MonoBehaviour
     public virtual void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
+    }
+
+    public void AddSettedSlotList(BaseSlot slot)
+    {
+        SettedSlotList.Add(slot);
     }
 
     //아이템 추가용에 있는 비활성 노드인지 실제 게임 창에서 상호작용하는 활성노드인지 구분하기 위한 프로퍼티

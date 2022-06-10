@@ -160,6 +160,34 @@ public class ItemBag : Singleton<ItemBag>
     //아이템을 크기에 맞춰서 슬롯에 넣어준다.
     public void SetItem(BaseNode node,Vector2Int index)
     {
+        Vector2 imagesize;
+        BaseSlot topleft = InventorySlotArr[(index.x) + (index.y) * (InventorySlotSize.x)];
+        BaseSlot bottomright = InventorySlotArr[(index.x + node.GetSize().x) + (index.y + node.GetSize().y) * (InventorySlotSize.x)];
+
+        imagesize.x = topleft.rectTransform.rect.width * node.GetSize().x;
+        imagesize.y = topleft.rectTransform.rect.height * node.GetSize().y;
+
+        node.transform.parent = topleft.transform;
+        node.rectTransform.sizeDelta = imagesize;
+        node.rectTransform.localPosition = new Vector3(0, 0, 0);
+
+
+
+
+        //node.rectTransform.rect.width = imagesize.x;
+        //node.rectTransform.rect.height = imagesize.y;
+
+        for (int y=0;y<node.GetSize().y;y++)
+        {
+            for(int x=0;x<node.GetSize().x;x++)
+            {
+                //if (y == 0 && x == 0)
+                    //node.rectTransform.localPosition = InventorySlotArr[(index.x + x) + (index.y + y) * (InventorySlotSize.x)].SettingNode = node;
+                InventorySlotArr[(index.x + x) + (index.y + y) * (InventorySlotSize.x)].SetNodeData(node);
+            }
+        }
+        
+
 
     }
 

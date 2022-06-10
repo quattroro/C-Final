@@ -8,11 +8,16 @@ public class ItemNodeManager : Singleton<ItemNodeManager>
     public ItemDataLoader dataloader;
     public BaseNode nodeprefab;
 
+
+
     public BaseNode InstantiateNode(Transform parent)
     {
         BaseNode copynode = GameObject.Instantiate<BaseNode>(nodeprefab);
         copynode.transform.parent = parent;
 
+        int rannum = Random.Range(0, dataloader.iteminfos.Count);
+        
+        
         
         return copynode;
     }

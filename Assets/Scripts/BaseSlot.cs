@@ -22,6 +22,7 @@ public class BaseSlot : MonoBehaviour
     {
         return slottype;
     }
+    //슬롯하나에 노드하나를 세팅
     public virtual void SetNode(BaseNode node)
     {
         //노드를 슬록 자신의 하위로 두고 크기를 맞춰준다.
@@ -32,6 +33,17 @@ public class BaseSlot : MonoBehaviour
             node.NodeIsClicked = false;
         node.SettedSlot = this;
         this.SettingNode = node;
+    }
+
+    //슬롯 여러개에 같은 노드를 세팅할때 사용
+    public virtual void SetNodeData(BaseNode node)
+    {
+        if (node.NodeIsClicked)
+            node.NodeIsClicked = false;
+        //node.SettedSlot = this;
+        this.SettingNode = node;
+        node.AddSettedSlotList(this);
+
     }
 
     //해당 슬롯에 세팅할 노드와 노드의 크기를 넣어주면 해당 크기만큼 아이템을 세팅해준다.
