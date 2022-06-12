@@ -5,31 +5,53 @@ using UnityEngine;
 public class BaseNode : MonoBehaviour
 {
     Vector2Int Index;
-
+    [SerializeField]
     private bool _isactive;//활성노드 / 비활성 노드
+    [SerializeField]
     private bool _isclicked;//클릭된상태 / 클릭되지 않은 상태
 
     public RectTransform rectTransform;//자기 자신의 recttransform
 
     public BaseSlot SettedSlot;//노드가 셋팅되어 있는 슬롯
+
     public List<BaseSlot> SettedSlotList;//노드가 셋팅되어 있는 슬롯들
 
 
     public BaseSlot PreSlot;//노드가 클릭되어서 마우스를 따라다닐때 원래 있던 슬롯의 위치를 저장해 놓는다.
 
 
+    public Transform[] castpoint = new Transform[4];
 
     public virtual void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
     }
 
+    //public Vector2 GetCastPoint(int index)
+    //{
+    //    Vector2 temp = castpoint[index].position;
+
+    //}
+
+    public BaseNode NodeClick()
+    {
+        //BaseNode temp = this;
+        NodeIsClicked = true;
+        PreSlot = SettedSlotList[0];
+        foreach(var a in SettedSlotList)
+        {
+            a.ClearSettingNode();
+        }
+        SettedSlotList.Clear();
+        return this;
+    }    
+
     public void AddSettedSlotList(BaseSlot slot)
     {
         SettedSlotList.Add(slot);
     }
 
-    //아이템 추가용에 있는 비활성 노드인지 실제 게임 창에서 상호작용하는 활성노드인지 구분하기 위한 프로퍼티
+    //해당 노드가 상호작용 할 수 있는 활성 노드인지를 확인
     public bool NodeIsActive
     {
         get
@@ -54,6 +76,16 @@ public class BaseNode : MonoBehaviour
             _isclicked = value;
 
         }
+    }
+
+    public virtual void InitSetting(Dictionary<int, string> itemdata, Sprite sprite)
+    {
+
+    }
+
+    public virtual void InitSetting(int itemcode, string Name, Sprite sprite, Vector3 pos, string _type)
+    {
+
     }
 
     //해당 노드를 절반씩 두개의 노드로 나눠준다.

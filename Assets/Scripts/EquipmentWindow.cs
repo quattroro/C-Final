@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 
 
-public class EquipmentWindow : MonoBehaviour
+public class EquipmentWindow : Singleton<EquipmentWindow>
 {
     public List<BaseSlot> equipslots;
 

@@ -82,6 +82,7 @@ public class ItemBag : Singleton<ItemBag>
     {
         Vector2Int itemsize;
         bool flag = false;
+        //node.SettedSlotList.Clear();
         //만약 아이템이 스택이 가능한 아이템이면 퀵슬롯과 인벤토리 창에서 같은 종류의 아이템이 있는지 찾고 같은 아이템이 있으면 스택을 증가시켜 준다.
 
         if(node.IsStackAble())
@@ -91,6 +92,7 @@ public class ItemBag : Singleton<ItemBag>
                 if (QuickSlotArr[x + 0].GetSettingNodeID() == node.GetItemID())
                 {
                     QuickSlotArr[x + 0].SettingNode.ChangeStack(node.GetStack());
+                    Debug.Log("퀵슬롯 스택 증가");
                     GameObject.Destroy(node.gameObject);
                     return;
                 }
@@ -107,6 +109,7 @@ public class ItemBag : Singleton<ItemBag>
                         if (InventorySlotArr[x + y * (InventorySlotSize.x)].GetSettingNodeID() == node.GetItemID())
                         {
                             InventorySlotArr[x + y * (InventorySlotSize.x)].SettingNode.ChangeStack(node.GetStack());
+                            Debug.Log("가방 스택 증가");
                             GameObject.Destroy(node.gameObject);
                             return;
                         }
@@ -126,7 +129,7 @@ public class ItemBag : Singleton<ItemBag>
                     //그곳에서부터 해당 아이템의 크기만큼 비어있는지 확인한다.
                     itemsize = node.GetSize();
                     flag = false;
-                    if (x + itemsize.x < InventorySlotSize.x && y + itemsize.y < InventorySlotSize.y)
+                    if (x + itemsize.x <= InventorySlotSize.x && y + itemsize.y <= InventorySlotSize.y)
                     {
                         for (int i = 0; i < itemsize.y; i++)
                         {
@@ -147,6 +150,7 @@ public class ItemBag : Singleton<ItemBag>
                         if(!flag)
                         {
                             SetItem(node, new Vector2Int(x, y));
+                            Debug.Log("아이템 넣어줌");
                             //InventorySlotArr[x + y * (InventorySlotSize.x)].SetNode(node, node.GetSize());
                             return;
                         }
@@ -154,6 +158,10 @@ public class ItemBag : Singleton<ItemBag>
                 }
             }
         }
+        //비어있응 곳이 없으면 객체를 없애고 끝낸다.
+        Debug.Log("빈공간 없음");
+        GameObject.Destroy(node.gameObject);
+        return;
 
     }
 
@@ -162,7 +170,8 @@ public class ItemBag : Singleton<ItemBag>
     {
         Vector2 imagesize;
         BaseSlot topleft = InventorySlotArr[(index.x) + (index.y) * (InventorySlotSize.x)];
-        BaseSlot bottomright = InventorySlotArr[(index.x + node.GetSize().x) + (index.y + node.GetSize().y) * (InventorySlotSize.x)];
+        //BaseSlot bottomright = InventorySlotArr[(index.x + node.GetSize().x) + (index.y + node.GetSize().y) * (InventorySlotSize.x)];
+        node.SettedSlotList.Clear();
 
         imagesize.x = topleft.rectTransform.rect.width * node.GetSize().x;
         imagesize.y = topleft.rectTransform.rect.height * node.GetSize().y;
@@ -191,7 +200,52 @@ public class ItemBag : Singleton<ItemBag>
 
     }
 
+    //아이템을 크기에 맞춰서 슬롯에 넣어준다.
+    public void SetItem(BaseNode node, BaseSlot slot/*왼쪽 위 슬롯*/)
+    {
+        Vector2 imagesize;
+        BaseSlot topleft = slot;
+        Vector2Int index = slot.SlotIndex;
+        node.SettedSlotList.Clear();
 
+        //BaseSlot bottomright = InventorySlotArr[(index.x + node.GetSize().x) + (index.y + node.GetSize().y) * (InventorySlotSize.x)];
+
+        imagesize.x = topleft.rectTransform.rect.width * node.GetSize().x;
+        imagesize.y = topleft.rectTransform.rect.height * node.GetSize().y;
+
+        node.transform.parent = topleft.transform;
+        node.rectTransform.sizeDelta = imagesize;
+        node.rectTransform.localPosition = new Vector3(0, 0, 0);
+
+        
+
+
+        //node.rectTransform.rect.width = imagesize.x;
+        //node.rectTransform.rect.height = imagesize.y;
+
+        //아이템을 넣으려는 슬롯이 퀵슬롯일때
+        if(slot.GetSlotTypes()==EnumTypes.SlotTypes.Quick)
+        {
+            slot.SetNodeData(node);
+        }
+        else if(slot.GetSlotTypes() == EnumTypes.SlotTypes.Item)
+        {
+            for (int y = 0; y < node.GetSize().y; y++)
+            {
+                for (int x = 0; x < node.GetSize().x; x++)
+                {
+                    //if (y == 0 && x == 0)
+                    //node.rectTransform.localPosition = InventorySlotArr[(index.x + x) + (index.y + y) * (InventorySlotSize.x)].SettingNode = node;
+                    InventorySlotArr[(index.x + x) + (index.y + y) * (InventorySlotSize.x)].SetNodeData(node);
+                }
+            }
+        }
+
+        
+
+
+
+    }
 
     ////미리 만들어진 노드 객체를 넘겨받아서 세팅
     //public void InsertItem(BaseNode node)

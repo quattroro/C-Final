@@ -14,6 +14,7 @@ public class EnumTypes
         StrRequire,
         DexRequire,
         Price,
+        QualityLevel,
         Category,
         Parts,
         Grade,
@@ -25,8 +26,8 @@ public class EnumTypes
     public enum SlotTypes
     {
         Item,
-        Craft,
-        Result,
+        Equip,
+        Quick,
         TypeMax
     }
 

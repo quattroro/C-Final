@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+
+
 
 public class ItemNode : BaseNode
 {
     public string itemName;//아이템 이름
     public int itemCode;//아이템 코드
     public Sprite itemSprite;//아이템 이미지
+    public int spritenum;
+    public float[] damage = new float[2];
 
     public Vector2Int itemsize;//아이템이 인벤토리창에서 차지하는 크기
 
@@ -20,14 +25,56 @@ public class ItemNode : BaseNode
 
     public Text stacktext;//개수 표시 텍스트
 
+    public Dictionary<int, string> itemdata;
+
     public override void Awake()
     {
         base.Awake();
         //stacktext = GetComponentInChildren<Text>();
     }
 
+    
+
+    public override void InitSetting(Dictionary<int, string> itemdata,Sprite sprite)
+    {
+        string[] temp;
+        int x, y;
+        this.itemdata = itemdata;
+        itemName = itemdata[(int)EnumTypes.ItemCollums.Name];
+        temp = itemdata[(int)EnumTypes.ItemCollums.Size].Split(',');
+        int.TryParse(temp[0], out x);
+        int.TryParse(temp[1], out y);
+        itemsize = new Vector2Int(x, y);
+
+        int.TryParse(itemdata[(int)EnumTypes.ItemCollums.ItemCode], out itemCode);
+        int.TryParse(itemdata[(int)EnumTypes.ItemCollums.SpriteNum], out spritenum);
+        temp = itemdata[(int)EnumTypes.ItemCollums.Damage].Split(',');
+        for (int i = 0; i < temp.Length; i++)
+        {
+            float.TryParse(temp[i], out damage[i]);
+        }
+
+
+        if (itemdata[(int)EnumTypes.ItemCollums.Category] == EnumTypes.ItemTypes.StackAble.ToString())
+        {
+            //Debug.Log($"욜로들어옴");
+            this._isstackable = true;
+            this.itemtype = EnumTypes.ItemTypes.StackAble;
+        }
+        else
+        {
+            this._isstackable = false;
+            this.itemtype = EnumTypes.ItemTypes.Equips;
+        }
+
+        GetComponent<Image>().sprite = sprite;
+        ChangeStack(+1);
+        NodeIsActive = true;
+    }
+
+
     //초기세팅
-    public void InitSetting(int itemcode, string Name, Sprite sprite, Vector3 pos, string _type)
+    public override void InitSetting(int itemcode, string Name, Sprite sprite, Vector3 pos, string _type)
     {
         this.name = Name;
         this.itemName = Name;
@@ -136,6 +183,9 @@ public class ItemNode : BaseNode
     {
         return itemsize;
     }
+
+    
+
     //아이템이 클릭되었을땐 마우스를 따라다니게 해준다.
     public override void Update()
     {
@@ -143,7 +193,8 @@ public class ItemNode : BaseNode
         {
             if(NodeIsClicked)
             {
-                this.transform.position = Input.mousePosition;
+                Vector3 temp = new Vector3(-(rectTransform.sizeDelta / 2).x, (rectTransform.sizeDelta / 2).y, 0);
+                this.transform.position = Input.mousePosition + temp;
             }
         }
     }

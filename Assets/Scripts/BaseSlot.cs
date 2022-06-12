@@ -16,6 +16,7 @@ public class BaseSlot : MonoBehaviour
     public delegate void PickUpSlotEvent();
     protected PickUpSlotEvent pickupevent;
 
+    [SerializeField]
     protected EnumTypes.SlotTypes slottype;
 
     public EnumTypes.SlotTypes GetSlotTypes()
@@ -67,6 +68,7 @@ public class BaseSlot : MonoBehaviour
     {
         pickupevent += _event;
     }
+
     //현재 슬롯에 들어가있는 아이템을 삭제
     public void RemoveNode()
     {
@@ -76,6 +78,7 @@ public class BaseSlot : MonoBehaviour
             SettingNode = null;
         }
     }
+
     //현재 슬롯에 들어와있는 아이템을 삭제
     public void RemoveNode(BaseNode node)
     {
@@ -85,6 +88,13 @@ public class BaseSlot : MonoBehaviour
             SettingNode = null;
         }
     }
+
+    //셋팅되어있는 노드정보만 지워준다.
+    public void ClearSettingNode()
+    {
+        SettingNode = null;
+    }
+
     //현재 슬롯에 들어와있는 아이템을 리턴해준다.
     public virtual BaseNode GetSettingNode()
     {
