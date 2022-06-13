@@ -213,6 +213,7 @@ public class ItemBag : Singleton<ItemBag>
         imagesize.x = topleft.rectTransform.rect.width * node.GetSize().x;
         imagesize.y = topleft.rectTransform.rect.height * node.GetSize().y;
 
+        node.rectTransform.pivot = new Vector2(0, 1);
         node.transform.parent = topleft.transform;
         node.rectTransform.sizeDelta = imagesize;
         node.rectTransform.localPosition = new Vector3(0, 0, 0);

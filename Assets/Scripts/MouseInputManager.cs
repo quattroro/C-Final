@@ -262,7 +262,7 @@ public class MouseInputManager : MonoBehaviour
         for (int i=0;i<ClickedObj.castpoint.Length;i++)
         {
             result.Clear();
-            ped.position = pos + (Vector2)ClickedObj.castpoint[i].localPosition;
+            ped.position = pos + ClickedObj.GetCastPoint(i);
             raycaster.Raycast(ped, result);
             
             foreach (var a in result)
@@ -285,7 +285,7 @@ public class MouseInputManager : MonoBehaviour
             {
                 if (type != slot[i].GetSlotTypes())
                 {
-                    ClickedObj = ClickedObj.NodeClick();
+                    //ClickedObj = ClickedObj.NodeClick();
                     return;
                 }
                     
@@ -294,7 +294,9 @@ public class MouseInputManager : MonoBehaviour
         }
         else
         {
-            ClickedObj = ClickedObj.NodeClick();
+            if(ClickedObj.SettedSlotList.Count>0)
+
+                ClickedObj = ClickedObj.NodeClick();
         }
 
     }

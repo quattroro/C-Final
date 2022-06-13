@@ -194,7 +194,7 @@ public class ItemNode : BaseNode
             if(NodeIsClicked)
             {
                 Vector3 temp = new Vector3(-(rectTransform.sizeDelta / 2).x, (rectTransform.sizeDelta / 2).y, 0);
-                this.transform.position = Input.mousePosition + temp;
+                this.transform.position = Input.mousePosition ;
             }
         }
     }

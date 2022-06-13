@@ -27,16 +27,17 @@ public class BaseNode : MonoBehaviour
         rectTransform = GetComponent<RectTransform>();
     }
 
-    //public Vector2 GetCastPoint(int index)
-    //{
-    //    Vector2 temp = castpoint[index].position;
-
-    //}
+    public Vector2 GetCastPoint(int index)
+    {
+        Vector2 temp = castpoint[index].position;
+        return castpoint[index].position - this.transform.position;
+    }
 
     public BaseNode NodeClick()
     {
         //BaseNode temp = this;
         NodeIsClicked = true;
+        this.rectTransform.pivot = new Vector2(0.5f, 0.5f);
         PreSlot = SettedSlotList[0];
         foreach(var a in SettedSlotList)
         {
