@@ -10,6 +10,9 @@ public class BaseNode : MonoBehaviour
     [SerializeField]
     private bool _isclicked;//클릭된상태 / 클릭되지 않은 상태
 
+    //[SerializeField]
+    //private bool _isSnapped;//스냅에 의해 붙어있는 상태 / 스냅에 의해 붙어있지 않은 상태
+
     public RectTransform rectTransform;//자기 자신의 recttransform
 
     public BaseSlot SettedSlot;//노드가 셋팅되어 있는 슬롯
@@ -21,15 +24,25 @@ public class BaseNode : MonoBehaviour
 
 
     public Transform[] castpoint = new Transform[4];
+    public Vector2 castpointpos;
+
 
     public virtual void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
+
+        
+
+    }
+
+    //노드 스냅에 사용
+    public void Snap(BaseSlot slot)
+    {
+        //노드가 달라붙을 슬롯의 번호를 주면 해당 노드를 해당 슬롯에 붙인다.
     }
 
     public Vector2 GetCastPoint(int index)
     {
-        Vector2 temp = castpoint[index].position;
         return castpoint[index].position - this.transform.position;
     }
 
@@ -37,7 +50,7 @@ public class BaseNode : MonoBehaviour
     {
         //BaseNode temp = this;
         NodeIsClicked = true;
-        this.rectTransform.pivot = new Vector2(0.5f, 0.5f);
+        //this.rectTransform.pivot = new Vector2(0.5f, 0.5f);
         PreSlot = SettedSlotList[0];
         foreach(var a in SettedSlotList)
         {
@@ -75,9 +88,20 @@ public class BaseNode : MonoBehaviour
         set
         {
             _isclicked = value;
+            if(_isclicked)
+            {
+                this.rectTransform.pivot = new Vector2(0.5f, 0.5f);
+            }
+            else
+            {
+                this.rectTransform.pivot = new Vector2(0.0f, 1.0f);
+            }
 
         }
     }
+
+
+
 
     public virtual void InitSetting(Dictionary<int, string> itemdata, Sprite sprite)
     {

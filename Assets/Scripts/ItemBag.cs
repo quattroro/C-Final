@@ -127,34 +127,42 @@ public class ItemBag : Singleton<ItemBag>
                 if (InventorySlotArr[x + y * (InventorySlotSize.x)].SettingNode == null)
                 {
                     //그곳에서부터 해당 아이템의 크기만큼 비어있는지 확인한다.
+
                     itemsize = node.GetSize();
-                    flag = false;
-                    if (x + itemsize.x <= InventorySlotSize.x && y + itemsize.y <= InventorySlotSize.y)
+                    if(SlotIsEmpty(EnumTypes.SlotTypes.Item,new Vector2Int(x,y),itemsize))
                     {
-                        for (int i = 0; i < itemsize.y; i++)
-                        {
-                            for (int j = 0; j < itemsize.x; j++)
-                            {
-                                if (InventorySlotArr[(x + j) + (y + i) * (InventorySlotSize.x)].SettingNode != null)
-                                {
-                                    flag = true;
-                                    break;
-                                }
-                            }
-                            if(flag)
-                            {
-                                break;
-                            }
-                        }
-                        //아이템의 크기만큼 슬롯이 비어있으면 해당 슬롯의 왼쪽 위 첫번째 슬롯에 아이템을 넣어준다.
-                        if(!flag)
-                        {
-                            SetItem(node, new Vector2Int(x, y));
-                            Debug.Log("아이템 넣어줌");
-                            //InventorySlotArr[x + y * (InventorySlotSize.x)].SetNode(node, node.GetSize());
-                            return;
-                        }
+                        SetItem(node, new Vector2Int(x, y));
+                        Debug.Log("아이템 넣어줌");
+                        //InventorySlotArr[x + y * (InventorySlotSize.x)].SetNode(node, node.GetSize());
+                        return;
                     }
+                    //flag = false;
+                    //if (x + itemsize.x <= InventorySlotSize.x && y + itemsize.y <= InventorySlotSize.y)
+                    //{
+                    //    for (int i = 0; i < itemsize.y; i++)
+                    //    {
+                    //        for (int j = 0; j < itemsize.x; j++)
+                    //        {
+                    //            if (InventorySlotArr[(x + j) + (y + i) * (InventorySlotSize.x)].SettingNode != null)
+                    //            {
+                    //                flag = true;
+                    //                break;
+                    //            }
+                    //        }
+                    //        if(flag)
+                    //        {
+                    //            break;
+                    //        }
+                    //    }
+                    //    //아이템의 크기만큼 슬롯이 비어있으면 해당 슬롯의 왼쪽 위 첫번째 슬롯에 아이템을 넣어준다.
+                    //    if(!flag)
+                    //    {
+                    //        SetItem(node, new Vector2Int(x, y));
+                    //        Debug.Log("아이템 넣어줌");
+                    //        //InventorySlotArr[x + y * (InventorySlotSize.x)].SetNode(node, node.GetSize());
+                    //        return;
+                    //    }
+                    //}
                 }
             }
         }
@@ -196,8 +204,43 @@ public class ItemBag : Singleton<ItemBag>
             }
         }
         
+        
 
+    }
 
+    //슬롯의 시작 지점에서 아이템의 크기만큼 슬롯이 비어있는지 확인
+    public bool SlotIsEmpty(EnumTypes.SlotTypes type, Vector2Int start, Vector2Int size)
+    {
+        if (type == EnumTypes.SlotTypes.Item)//아이템창
+        {
+            if (start.x + size.x > InventorySlotSize.x || start.y + size.y > InventorySlotSize.y)//아이템상의 크기를 넘어가면 false
+                return false;
+
+            for (int i = 0; i < size.y; i++)
+            {
+                for (int j = 0; j < size.x; j++)
+                {
+                    if (InventorySlotArr[(start.x + j) + (start.y + i) * (InventorySlotSize.x)].SettingNode != null)
+                    {
+                        return false;
+                    }
+                }
+            }
+
+        }
+        else if (type == EnumTypes.SlotTypes.Quick)//퀵슬롯창
+        {
+            if (start.x + size.x <= QuickInvectoryNum)//아이템창 크기를 넘어가면 false
+                return false;
+
+            if (QuickSlotArr[start.x] != null)
+                return false;
+        }
+        else
+        {
+
+        }
+        return true;
     }
 
     //아이템을 크기에 맞춰서 슬롯에 넣어준다.
@@ -213,7 +256,8 @@ public class ItemBag : Singleton<ItemBag>
         imagesize.x = topleft.rectTransform.rect.width * node.GetSize().x;
         imagesize.y = topleft.rectTransform.rect.height * node.GetSize().y;
 
-        node.rectTransform.pivot = new Vector2(0, 1);
+        //
+        //node.rectTransform.pivot = new Vector2(0, 1);
         node.transform.parent = topleft.transform;
         node.rectTransform.sizeDelta = imagesize;
         node.rectTransform.localPosition = new Vector3(0, 0, 0);

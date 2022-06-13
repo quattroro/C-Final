@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+
+//마우스 조작에 따른 노드와 슬롯 조작
 public class MouseInputManager : MonoBehaviour
 {
     GraphicRaycaster raycaster;
-    BaseNode ClickedObj;
+    public BaseNode ClickedObj;
 
     private void Awake()
     {
@@ -19,6 +21,22 @@ public class MouseInputManager : MonoBehaviour
     {
 
     }
+
+
+    
+
+    //현재 마우스의 위치에 현재 클릭된 노드의 크기만큼의 비어있는 슬롯이 있는지 확인한다.
+    public void CheckClickNodeSlot()
+    {
+
+
+
+    }
+
+
+
+    
+
 
 
     public void LeftMouseDown(Vector2 pos)
@@ -68,8 +86,12 @@ public class MouseInputManager : MonoBehaviour
                 }
             }
         }
-        else
+        else//노드가 클릭된 상태에서 다시 클릭을 하면
         {
+            BaseSlot[] resultslot = new BaseSlot[4];
+            int count = 0;
+            bool flag = true;
+
             //아무것도 없는 공간에 노드를 두면 해당 노드는 파괴
             if (result.Count == 1)
             {
@@ -81,53 +103,108 @@ public class MouseInputManager : MonoBehaviour
                 }
             }
 
-            //무언가 있으면 해당 위치에 있는 오브젝트들 확인
-            foreach (var a in result)
+            ////무언가 있으면 해당 위치에 있는 오브젝트들 확인
+            //foreach (var a in result)
+            //{
+                
+            //}
+
+            //그래그하는 노드가 있을때
+            if (ClickedObj != null)
             {
-                //그래그하는 노드가 있을때
-                if (ClickedObj != null)
+                //해당 노드의 위치에 존재하는 슬롯들을 찾는다.
+                for (int i = 0; i < 4; i++)
                 {
-                    //해당 마우스의 위치에서 슬롯을 찾는다.
-                    if (a.gameObject.tag == "Slot")
+                    Vector2 temppos = ClickedObj.GetCastPoint(i);
+                    ped.position = pos + temppos;
+                    result.Clear();
+                    raycaster.Raycast(ped, result);
+                    
+                    foreach (var aa in result)
                     {
-                        slot = a.gameObject.GetComponent<BaseSlot>();
-                        //if (slot.GetSlotTypes() != EnumTypes.SlotTypes.Result)
-                        //{
-                        //    //찾은 슬롯이 빈 슬롯일때 해당 아이템 노드를 해당 노드에 세팅해준다.
-                        //    if (slot.SettingNode == null)
-                        //    {
-                        //        slot.SetNode(ClickedObj);
-                        //        //ClickedObj = null;
-                        //    }
-                        //    else
-                        //    {
-                        //        //클릭된 곳에 아이템이 들어있는 슬롯이 있고 해당 아이템이 드래그하고 있는 아이템과 같은 아이템이면 아이템을 병합한다.
-                        //        if (slot.SettingNode.GetItemID() == ClickedObj.GetItemID() && ClickedObj.IsStackAble())
-                        //        {
-                        //            slot.SettingNode.ItemMerge(ClickedObj);
-                        //            ClickedObj = null;
-                        //        }
-                        //        slot = null;
-                        //        //ClickedObj = null;
-                        //    }
-                        //}
-                        //else
-                        //{
-                        //    slot = null;
-                        //}
+                        if (aa.gameObject.tag == "Slot")
+                        {
+                            count++;
+                            resultslot[i] = aa.gameObject.GetComponent<BaseSlot>();
+                            break;
+                        }
+                    }
+                }
+
+                //모든 포인트가 슬롯안에 들어와 있고 들어간 슬롯이 같은 종류일때 그리고 들어갈 슬롯이 모두 비어있는 슬롯일때.
+                if (count >= 4)
+                {
+                    EnumTypes.SlotTypes type = resultslot[0].GetSlotTypes();
+                    for (int i = 1; i < resultslot.Length; i++)
+                    {
+                        if (type != resultslot[i].GetSlotTypes())
+                        {
+                            //ClickedObj = ClickedObj.NodeClick();
+                            flag = false;
+                            break;
+                        }
+
+                    }
+
+                    if (!ItemBag.Instance.SlotIsEmpty(EnumTypes.SlotTypes.Item, resultslot[0].SlotIndex, ClickedObj.GetSize()))
+                    {
+                        flag = false;
+                    }
+
+                    if (flag)
+                    {
+                        Debug.Log("슬롯에 집어넣음");
+                        ItemBag.Instance.SetItem(ClickedObj, resultslot[0]);
+                        ClickedObj = null;
                     }
 
                 }
+
+
+                ////해당 마우스의 위치에서 슬롯을 찾는다.
+                //if (a.gameObject.tag == "Slot")
+                //{
+                //    slot = a.gameObject.GetComponent<BaseSlot>();
+                //    //if (slot.GetSlotTypes() != EnumTypes.SlotTypes.Result)
+                //    //{
+                //    //    //찾은 슬롯이 빈 슬롯일때 해당 아이템 노드를 해당 노드에 세팅해준다.
+                //    //    if (slot.SettingNode == null)
+                //    //    {
+                //    //        slot.SetNode(ClickedObj);
+                //    //        //ClickedObj = null;
+                //    //    }
+                //    //    else
+                //    //    {
+                //    //        //클릭된 곳에 아이템이 들어있는 슬롯이 있고 해당 아이템이 드래그하고 있는 아이템과 같은 아이템이면 아이템을 병합한다.
+                //    //        if (slot.SettingNode.GetItemID() == ClickedObj.GetItemID() && ClickedObj.IsStackAble())
+                //    //        {
+                //    //            slot.SettingNode.ItemMerge(ClickedObj);
+                //    //            ClickedObj = null;
+                //    //        }
+                //    //        slot = null;
+                //    //        //ClickedObj = null;
+                //    //    }
+                //    //}
+                //    //else
+                //    //{
+                //    //    slot = null;
+                //    //}
+                //}
+
             }
+
             //드래그 중인 노드가 있는데 마우스의 위치에 슬롯이 없으면 노드는 원래있었던 자리로 돌아간다.
             if (ClickedObj != null && slot == null)
             {
-                ClickedObj.PreSlot.SetNode(ClickedObj);
+                Debug.Log("다시돌아감");
+                ItemBag.Instance.SetItem(ClickedObj, ClickedObj.PreSlot);
+                //ClickedObj.PreSlot.SetNode(ClickedObj);
                 ClickedObj = null;
             }
 
             if (ClickedObj != null)
                 ClickedObj = null;
+            Debug.Log("노드파괴");
         }
 
     }
@@ -174,79 +251,79 @@ public class MouseInputManager : MonoBehaviour
     //    }
     //}
 
-    public void LeftMouseUp(Vector2 pos)
-    {
-        //canvas에 있는 graphicraycast를 이용해 클릭된 위치에 있는 객체들의 정보들을 받아온다.
-        PointerEventData ped = new PointerEventData(null);
-        ped.position = pos;
-        List<RaycastResult> result = new List<RaycastResult>();
-        raycaster.Raycast(ped, result);
+    //public void LeftMouseUp(Vector2 pos)
+    //{
+    //    //canvas에 있는 graphicraycast를 이용해 클릭된 위치에 있는 객체들의 정보들을 받아온다.
+    //    PointerEventData ped = new PointerEventData(null);
+    //    ped.position = pos;
+    //    List<RaycastResult> result = new List<RaycastResult>();
+    //    raycaster.Raycast(ped, result);
 
-        BaseNode node = null;
-        BaseSlot slot = null;
+    //    BaseNode node = null;
+    //    BaseSlot slot = null;
 
-        Debug.Log($"개수{result.Count}");
+    //    Debug.Log($"개수{result.Count}");
 
-        //아무것도 없는 공간에 노드를 두면 해당 노드는 파괴
-        if (result.Count == 1)
-        {
-            if (ClickedObj != null)
-            {
-                GameObject.Destroy(ClickedObj.gameObject);
-                ClickedObj = null;
-                return;
-            }
-        }
+    //    //아무것도 없는 공간에 노드를 두면 해당 노드는 파괴
+    //    if (result.Count == 1)
+    //    {
+    //        if (ClickedObj != null)
+    //        {
+    //            GameObject.Destroy(ClickedObj.gameObject);
+    //            ClickedObj = null;
+    //            return;
+    //        }
+    //    }
 
-        //무언가 있으면 해당 위치에 있는 오브젝트들 확인
-        foreach (var a in result)
-        {
-            //그래그하는 노드가 있을때
-            if (ClickedObj != null)
-            {
-                //해당 마우스의 위치에서 슬롯을 찾는다.
-                if (a.gameObject.tag == "Slot")
-                {
-                    slot = a.gameObject.GetComponent<BaseSlot>();
-                    //if (slot.GetSlotTypes() != EnumTypes.SlotTypes.Result)
-                    //{
-                    //    //찾은 슬롯이 빈 슬롯일때 해당 아이템 노드를 해당 노드에 세팅해준다.
-                    //    if (slot.SettingNode == null)
-                    //    {
-                    //        slot.SetNode(ClickedObj);
-                    //        //ClickedObj = null;
-                    //    }
-                    //    else
-                    //    {
-                    //        //클릭된 곳에 아이템이 들어있는 슬롯이 있고 해당 아이템이 드래그하고 있는 아이템과 같은 아이템이면 아이템을 병합한다.
-                    //        if (slot.SettingNode.GetItemID() == ClickedObj.GetItemID() && ClickedObj.IsStackAble())
-                    //        {
-                    //            slot.SettingNode.ItemMerge(ClickedObj);
-                    //            ClickedObj = null;
-                    //        }
-                    //        slot = null;
-                    //        //ClickedObj = null;
-                    //    }
-                    //}
-                    //else
-                    //{
-                    //    slot = null;
-                    //}
-                }
+    //    //무언가 있으면 해당 위치에 있는 오브젝트들 확인
+    //    foreach (var a in result)
+    //    {
+    //        //그래그하는 노드가 있을때
+    //        if (ClickedObj != null)
+    //        {
+    //            //해당 마우스의 위치에서 슬롯을 찾는다.
+    //            if (a.gameObject.tag == "Slot")
+    //            {
+    //                slot = a.gameObject.GetComponent<BaseSlot>();
+    //                //if (slot.GetSlotTypes() != EnumTypes.SlotTypes.Result)
+    //                //{
+    //                //    //찾은 슬롯이 빈 슬롯일때 해당 아이템 노드를 해당 노드에 세팅해준다.
+    //                //    if (slot.SettingNode == null)
+    //                //    {
+    //                //        slot.SetNode(ClickedObj);
+    //                //        //ClickedObj = null;
+    //                //    }
+    //                //    else
+    //                //    {
+    //                //        //클릭된 곳에 아이템이 들어있는 슬롯이 있고 해당 아이템이 드래그하고 있는 아이템과 같은 아이템이면 아이템을 병합한다.
+    //                //        if (slot.SettingNode.GetItemID() == ClickedObj.GetItemID() && ClickedObj.IsStackAble())
+    //                //        {
+    //                //            slot.SettingNode.ItemMerge(ClickedObj);
+    //                //            ClickedObj = null;
+    //                //        }
+    //                //        slot = null;
+    //                //        //ClickedObj = null;
+    //                //    }
+    //                //}
+    //                //else
+    //                //{
+    //                //    slot = null;
+    //                //}
+    //            }
 
-            }
-        }
+    //        }
+    //    }
 
-        //드래그 중인 노드가 있는데 마우스의 위치에 슬롯이 없으면 노드는 원래있었던 자리로 돌아간다.
-        if (ClickedObj != null && slot == null)
-        {
-            ClickedObj.PreSlot.SetNode(ClickedObj);
-            ClickedObj = null;
-        }
+    //    //드래그 중인 노드가 있는데 마우스의 위치에 슬롯이 없으면 노드는 원래있었던 자리로 돌아간다.
+    //    if (ClickedObj != null && slot == null)
+    //    {
+    //        ClickedObj.PreSlot.SetNode(ClickedObj);
+    //        ClickedObj = null;
+    //    }
 
-        if (ClickedObj != null)
-            ClickedObj = null;
-    }
+    //    if (ClickedObj != null)
+    //        ClickedObj = null;
+    //}
 
     //아이템 노드가 클릭되어 마무스에 끌려다니고 있는 상태에서의 스냅을 구현
     public void DraggingItem(Vector2 pos)
@@ -336,7 +413,7 @@ public class MouseInputManager : MonoBehaviour
 
         if(ClickedObj!=null)
         {
-            DraggingItem(Input.mousePosition);
+            //DraggingItem(Input.mousePosition);
         }
     }
 }
