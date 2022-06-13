@@ -326,57 +326,57 @@ public class MouseInputManager : MonoBehaviour
     //}
 
     //아이템 노드가 클릭되어 마무스에 끌려다니고 있는 상태에서의 스냅을 구현
-    public void DraggingItem(Vector2 pos)
-    {
-        //해당 아이템 노드의 크기를 받아와서 네 귀퉁이에 raycast를 이용해서 슬롯 위에 들어왔는지릴 확인한다.
-        PointerEventData ped = new PointerEventData(null);
+    //public void DraggingItem(Vector2 pos)
+    //{
+    //    //해당 아이템 노드의 크기를 받아와서 네 귀퉁이에 raycast를 이용해서 슬롯 위에 들어왔는지릴 확인한다.
+    //    PointerEventData ped = new PointerEventData(null);
        
-        List<RaycastResult> result = new List<RaycastResult>();
+    //    List<RaycastResult> result = new List<RaycastResult>();
 
-        BaseSlot[] slot = new BaseSlot[ClickedObj.castpoint.Length];
-        int count = 0;
+    //    BaseSlot[] slot = new BaseSlot[ClickedObj.castpoint.Length];
+    //    int count = 0;
 
-        for (int i=0;i<ClickedObj.castpoint.Length;i++)
-        {
-            result.Clear();
-            ped.position = pos + ClickedObj.GetCastPoint(i);
-            raycaster.Raycast(ped, result);
+    //    for (int i=0;i<ClickedObj.castpoint.Length;i++)
+    //    {
+    //        result.Clear();
+    //        ped.position = pos + ClickedObj.GetCastPoint(i);
+    //        raycaster.Raycast(ped, result);
             
-            foreach (var a in result)
-            {
-                if (a.gameObject.tag == "Slot")
-                {
-                    count++;
-                    slot[i] = a.gameObject.GetComponent<BaseSlot>();
-                    break;
-                }
-            }
-        }
+    //        foreach (var a in result)
+    //        {
+    //            if (a.gameObject.tag == "Slot")
+    //            {
+    //                count++;
+    //                slot[i] = a.gameObject.GetComponent<BaseSlot>();
+    //                break;
+    //            }
+    //        }
+    //    }
         
         
-        //모든 포인트가 슬롯안에 들어와 있고 들어간 슬롯이 같은 종류일때 해당 슬롯에 세팅해준다.
-        if(count>=4)
-        {
-            EnumTypes.SlotTypes type = slot[0].GetSlotTypes();
-            for (int i = 1; i < slot.Length; i++)
-            {
-                if (type != slot[i].GetSlotTypes())
-                {
-                    //ClickedObj = ClickedObj.NodeClick();
-                    return;
-                }
+    //    //모든 포인트가 슬롯안에 들어와 있고 들어간 슬롯이 같은 종류일때 해당 슬롯에 세팅해준다.
+    //    if(count>=4)
+    //    {
+    //        EnumTypes.SlotTypes type = slot[0].GetSlotTypes();
+    //        for (int i = 1; i < slot.Length; i++)
+    //        {
+    //            if (type != slot[i].GetSlotTypes())
+    //            {
+    //                //ClickedObj = ClickedObj.NodeClick();
+    //                return;
+    //            }
                     
-            }
-            ItemBag.Instance.SetItem(ClickedObj, slot[0]);
-        }
-        else
-        {
-            if(ClickedObj.SettedSlotList.Count>0)
+    //        }
+    //        ItemBag.Instance.SetItem(ClickedObj, slot[0]);
+    //    }
+    //    else
+    //    {
+    //        if(ClickedObj.SettedSlotList.Count>0)
 
-                ClickedObj = ClickedObj.NodeClick();
-        }
+    //            ClickedObj = ClickedObj.NodeClick();
+    //    }
 
-    }
+    //}
     public void RightMouseUp(Vector2 pos)
     {
 

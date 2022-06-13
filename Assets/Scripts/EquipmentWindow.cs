@@ -8,6 +8,16 @@ public class EquipmentWindow : Singleton<EquipmentWindow>
 {
     public List<BaseSlot> equipslots;
 
+
+
+
+    public void EquipEquipments(BaseNode node, BaseSlot slot)
+    {
+
+    }
+
+
+
     private void Awake()
     {
         BaseSlot[] temps = (BaseSlot[])GetComponentsInChildren<EquipSlot>();

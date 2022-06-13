@@ -33,7 +33,10 @@ public class ItemNode : BaseNode
         //stacktext = GetComponentInChildren<Text>();
     }
 
-    
+    public override EnumTypes.ItemTypes GetItemTypes()
+    {
+        return itemtype;
+    }
 
     public override void InitSetting(Dictionary<int, string> itemdata,Sprite sprite)
     {

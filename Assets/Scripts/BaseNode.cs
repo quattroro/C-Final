@@ -35,6 +35,12 @@ public class BaseNode : MonoBehaviour
 
     }
 
+    public virtual EnumTypes.ItemTypes GetItemTypes()
+    {
+        return EnumTypes.ItemTypes.TypeMax;
+    }
+
+
     //노드 스냅에 사용
     public void Snap(BaseSlot slot)
     {

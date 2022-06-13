@@ -249,6 +249,17 @@ public class ItemBag : Singleton<ItemBag>
         Vector2 imagesize;
         BaseSlot topleft = slot;
         Vector2Int index = slot.SlotIndex;
+
+        //장비 아이템을 큇슬롯에 넣을려고 할때 또는 물략등의 아이템을 장비 슬롯에 넣을려고 할때 막는다.
+        if(node.GetItemTypes() == EnumTypes.ItemTypes.Equips&&slot.GetSlotTypes()==EnumTypes.SlotTypes.Quick
+            || node.GetItemTypes() == EnumTypes.ItemTypes.StackAble && slot.GetSlotTypes() == EnumTypes.SlotTypes.Equip)
+        {
+            return;
+        }
+
+        
+
+
         node.SettedSlotList.Clear();
 
         //BaseSlot bottomright = InventorySlotArr[(index.x + node.GetSize().x) + (index.y + node.GetSize().y) * (InventorySlotSize.x)];
@@ -271,7 +282,9 @@ public class ItemBag : Singleton<ItemBag>
         //아이템을 넣으려는 슬롯이 퀵슬롯일때
         if(slot.GetSlotTypes()==EnumTypes.SlotTypes.Quick)
         {
-            slot.SetNodeData(node);
+            //아이템 타입이 퀵슬롯에 들어갈 수 있는 타입인지 확인하고 넣어준다.
+            if(node.GetItemTypes()== EnumTypes.ItemTypes.StackAble)
+                slot.SetNodeData(node);
         }
         else if(slot.GetSlotTypes() == EnumTypes.SlotTypes.Item)
         {
