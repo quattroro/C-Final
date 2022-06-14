@@ -23,22 +23,27 @@ public class BaseSlot : MonoBehaviour
     {
         return slottype;
     }
+
     //슬롯하나에 노드하나를 세팅
     public virtual void SetNode(BaseNode node)
     {
+        node.SettedSlotList.Clear();
         //노드를 슬록 자신의 하위로 두고 크기를 맞춰준다.
         node.transform.parent = this.transform;
         node.rectTransform.sizeDelta = this.rectTransform.sizeDelta;
         node.transform.localPosition = new Vector3(0, 0, 0);
         if (node.NodeIsClicked)
             node.NodeIsClicked = false;
-        node.SettedSlot = this;
+
+        node.AddSettedSlotList(this);
+        //node.SettedSlot = this;
         this.SettingNode = node;
     }
 
     //슬롯 여러개에 같은 노드를 세팅할때 사용
     public virtual void SetNodeData(BaseNode node)
     {
+        //node.SettedSlotList.Clear();
         if (node.NodeIsClicked)
             node.NodeIsClicked = false;
         //node.SettedSlot = this;

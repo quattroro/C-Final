@@ -211,6 +211,8 @@ public class ItemBag : Singleton<ItemBag>
     //슬롯의 시작 지점에서 아이템의 크기만큼 슬롯이 비어있는지 확인
     public bool SlotIsEmpty(EnumTypes.SlotTypes type, Vector2Int start, Vector2Int size)
     {
+        
+
         if (type == EnumTypes.SlotTypes.Item)//아이템창
         {
             if (start.x + size.x > InventorySlotSize.x || start.y + size.y > InventorySlotSize.y)//아이템상의 크기를 넘어가면 false
@@ -244,7 +246,7 @@ public class ItemBag : Singleton<ItemBag>
     }
 
     //아이템을 크기에 맞춰서 슬롯에 넣어준다.
-    public void SetItem(BaseNode node, BaseSlot slot/*왼쪽 위 슬롯*/)
+    public bool SetItem(BaseNode node, BaseSlot slot/*왼쪽 위 슬롯*/)
     {
         Vector2 imagesize;
         BaseSlot topleft = slot;
@@ -254,7 +256,7 @@ public class ItemBag : Singleton<ItemBag>
         if(node.GetItemTypes() == EnumTypes.ItemTypes.Equips&&slot.GetSlotTypes()==EnumTypes.SlotTypes.Quick
             || node.GetItemTypes() == EnumTypes.ItemTypes.StackAble && slot.GetSlotTypes() == EnumTypes.SlotTypes.Equip)
         {
-            return;
+            return false;
         }
 
         
@@ -283,8 +285,10 @@ public class ItemBag : Singleton<ItemBag>
         if(slot.GetSlotTypes()==EnumTypes.SlotTypes.Quick)
         {
             //아이템 타입이 퀵슬롯에 들어갈 수 있는 타입인지 확인하고 넣어준다.
-            if(node.GetItemTypes()== EnumTypes.ItemTypes.StackAble)
+            if (node.GetItemTypes() == EnumTypes.ItemTypes.StackAble)
                 slot.SetNodeData(node);
+            else
+                return false;
         }
         else if(slot.GetSlotTypes() == EnumTypes.SlotTypes.Item)
         {
@@ -298,7 +302,11 @@ public class ItemBag : Singleton<ItemBag>
                 }
             }
         }
+        else// 장비 슬롯일때
+        {
 
+        }
+        return true;
         
 
 

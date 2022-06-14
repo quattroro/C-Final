@@ -146,17 +146,29 @@ public class MouseInputManager : MonoBehaviour
 
                     }
 
-                    if (!ItemBag.Instance.SlotIsEmpty(EnumTypes.SlotTypes.Item, resultslot[0].SlotIndex, ClickedObj.GetSize()))
+                    if(resultslot[0].GetSlotTypes() != EnumTypes.SlotTypes.Equip)//장비 슬롯이 아니라 다른 슬롯에 아이템을 넣을때
                     {
-                        flag = false;
-                    }
+                        if (!ItemBag.Instance.SlotIsEmpty(EnumTypes.SlotTypes.Item, resultslot[0].SlotIndex, ClickedObj.GetSize()))//아이템 가방에 해당 크기만큼 비어있는지 확인하고
+                        {
+                            flag = false;
+                        }
 
-                    if (flag)
-                    {
-                        Debug.Log("슬롯에 집어넣음");
-                        ItemBag.Instance.SetItem(ClickedObj, resultslot[0]);
-                        ClickedObj = null;
+                        if (flag)//이버있으면 아이템을 넣어준다.
+                        {
+                            Debug.Log("슬롯에 집어넣음");
+                            
+                            
+                            if(ItemBag.Instance.SetItem(ClickedObj, resultslot[0]))
+                                ClickedObj = null;
+
+                        }
                     }
+                    else//아이템을 넣으려는 슬롯이 장비 슬롯일때
+                    {
+                        if(EquipmentWindow.Instance.EquipEquipments(ClickedObj, resultslot[0]))
+                            ClickedObj = null;
+                    }
+                    
 
                 }
 
@@ -197,7 +209,13 @@ public class MouseInputManager : MonoBehaviour
             if (ClickedObj != null && slot == null)
             {
                 Debug.Log("다시돌아감");
-                ItemBag.Instance.SetItem(ClickedObj, ClickedObj.PreSlot);
+
+                if (ClickedObj.PreSlot.GetSlotTypes() != EnumTypes.SlotTypes.Equip)
+                    ItemBag.Instance.SetItem(ClickedObj, ClickedObj.PreSlot);
+                else
+                    EquipmentWindow.Instance.EquipEquipments(ClickedObj, ClickedObj.PreSlot);
+
+                //ItemBag.Instance.SetItem(ClickedObj, ClickedObj.PreSlot);
                 //ClickedObj.PreSlot.SetNode(ClickedObj);
                 ClickedObj = null;
             }

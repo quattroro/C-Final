@@ -28,6 +28,9 @@ public class ItemNodeManager : Singleton<ItemNodeManager>
         int.TryParse(data[(int)EnumTypes.ItemCollums.SpriteNum], out spritenum);
         string category = data[(int)EnumTypes.ItemCollums.Category];
 
+        string parts = data[(int)EnumTypes.ItemCollums.Parts];
+
+
         copynode.InitSetting(data, itemsprites[spritenum]);
         
         

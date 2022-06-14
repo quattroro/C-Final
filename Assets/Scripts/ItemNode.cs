@@ -5,27 +5,136 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 
-
-public class ItemNode : BaseNode
+//각각의 아이템 노드는 클릭은 mouseinputmanager에서 raycast를 이용해서 동작하고, 아이템 정보창 출력을 위한 마우스 enter, exit는 이벤트 핸들러를 이용해서 동작한다.
+public class ItemNode : BaseNode,IPointerEnterHandler,IPointerExitHandler
 {
+    [Header("아이템 데이터")]
     public string itemName;//아이템 이름
     public int itemCode;//아이템 코드
     public Sprite itemSprite;//아이템 이미지
     public int spritenum;
     public float[] damage = new float[2];
 
+    public float durability;//아이템 내구도
+
+    public float strrequire;
+
+    public float dexrequire;
+
+    public float price;
+
+    public int qurlitylevel;
+
+    public int grade;
+
     public Vector2Int itemsize;//아이템이 인벤토리창에서 차지하는 크기
+
+    public EnumTypes.ItemTypes itemtype;//아이템 타입
+
+    public EnumTypes.EquipmentTypes equiptype;//장착 부위 
+
+    [Header("=======================================")]
 
     public int _Stack;//아이템 개수
 
     public bool _isstackable = false;//해당 아이템이 스택이 가능한 아이템인지 여부
 
-    public EnumTypes.ItemTypes itemtype;//아이템 타입
-    public EnumTypes.EquipmentTypes equiptype;//장착 부위 
+    [SerializeField]
+    private bool _isShowInfoWindow = false;
+
+    [SerializeField]
+    private bool _isMouseOn = false;
+
+    public float ShowInfoTime = 0.0f;
+
 
     public Text stacktext;//개수 표시 텍스트
 
     public Dictionary<int, string> itemdata;
+
+
+
+    public bool IsShowInfoWindow
+    {
+        get
+        {
+            return _isShowInfoWindow;
+        }
+        set
+        {
+            _isShowInfoWindow = value;
+            if (value)
+            {
+                ShowItemInfoWindow();
+            }
+            else
+            {
+                HideItemInfoWindow();
+            }
+
+
+        }
+    }
+
+    public bool IsMouseOn
+    {
+        get
+        {
+            return _isMouseOn;
+        }
+        set
+        {
+            _isMouseOn = value;
+            if(value)
+            {
+                StartCoroutine(TimeCount());
+            }
+            else
+            {
+                StopCoroutine(TimeCount());
+                IsShowInfoWindow = false;
+            }
+
+        }
+
+    }
+
+    public void ShowItemInfoWindow()
+    {
+
+    }
+
+    public void HideItemInfoWindow()
+    {
+
+    }
+
+    //마우스가 노드의 위에 들어오면 사용자가 설정한 시간만큼 0.1초씩 카운트를 한다.
+    //마우스가 노드의 위에 설정한 시간만큼 올라와 있으면 그때 아이템 정보창을 출력한다.
+    IEnumerator TimeCount()
+    {
+        float count = 0.0f;
+
+        while(true)
+        {
+            count += 0.1f;
+            if (count >= ShowInfoTime)
+            {
+                IsShowInfoWindow = true;
+                yield break;
+            }
+
+            if (NodeIsClicked || IsMouseOn == false)
+            {
+                IsShowInfoWindow = false;
+                yield break;
+            }
+
+            yield return new WaitForSeconds(0.1f);
+        }
+
+       
+    }
 
     public override void Awake()
     {
@@ -37,6 +146,11 @@ public class ItemNode : BaseNode
     {
         return itemtype;
     }
+    public override EnumTypes.EquipmentTypes GetEquipTypes()
+    {
+        return equiptype;
+    }
+
 
     public override void InitSetting(Dictionary<int, string> itemdata,Sprite sprite)
     {
@@ -69,6 +183,28 @@ public class ItemNode : BaseNode
             this._isstackable = false;
             this.itemtype = EnumTypes.ItemTypes.Equips;
         }
+
+
+        float.TryParse(itemdata[(int)EnumTypes.ItemCollums.Durability], out durability);
+        float.TryParse(itemdata[(int)EnumTypes.ItemCollums.Durability], out strrequire);
+        float.TryParse(itemdata[(int)EnumTypes.ItemCollums.Durability], out dexrequire);
+        float.TryParse(itemdata[(int)EnumTypes.ItemCollums.Durability], out price);
+        int.TryParse(itemdata[(int)EnumTypes.ItemCollums.Durability], out qurlitylevel);
+        int.TryParse(itemdata[(int)EnumTypes.ItemCollums.Durability], out grade);
+
+        if(itemtype==EnumTypes.ItemTypes.Equips)
+        {
+            for (EnumTypes.EquipmentTypes  i = 0; i < EnumTypes.EquipmentTypes.EquipMax; i++)
+            {
+                if(itemdata[(int)EnumTypes.ItemCollums.Parts]==i.ToString())
+                {
+                    this.equiptype = i;
+                    break;
+                }
+            }
+        }
+        
+        
 
         GetComponent<Image>().sprite = sprite;
         ChangeStack(+1);
@@ -200,5 +336,15 @@ public class ItemNode : BaseNode
                 this.transform.position = Input.mousePosition ;
             }
         }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        throw new System.NotImplementedException();
     }
 }
