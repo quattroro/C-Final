@@ -8,7 +8,7 @@ public class ItemNodeManager : Singleton<ItemNodeManager>
     public ItemDataLoader dataloader;
     public BaseNode nodeprefab;
     public Sprite[] itemsprites;
-
+    public ItemInfoPanel infoPanel;
 
     public BaseNode InstantiateNode(int itemcode, Transform parent)
     {
@@ -40,6 +40,15 @@ public class ItemNodeManager : Singleton<ItemNodeManager>
     private void Awake()
     {
         itemsprites = Resources.LoadAll<Sprite>("Sprites/items");
+        infoPanel = GetComponentInChildren<ItemInfoPanel>();
+        infoPanel.gameObject.SetActive(false);
+    }
+
+    public ItemInfoPanel getInfoPanel()
+    {
+        if (infoPanel.gameObject.activeSelf == false)
+            infoPanel.gameObject.SetActive(true);
+        return infoPanel;
     }
 
     // Start is called before the first frame update

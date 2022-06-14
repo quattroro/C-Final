@@ -8,6 +8,9 @@ using UnityEngine.EventSystems;
 //각각의 아이템 노드는 클릭은 mouseinputmanager에서 raycast를 이용해서 동작하고, 아이템 정보창 출력을 위한 마우스 enter, exit는 이벤트 핸들러를 이용해서 동작한다.
 public class ItemNode : BaseNode,IPointerEnterHandler,IPointerExitHandler
 {
+    //ItemInfoPanel infopanel;
+
+
     [Header("아이템 데이터")]
     public string itemName;//아이템 이름
     public int itemCode;//아이템 코드
@@ -52,7 +55,7 @@ public class ItemNode : BaseNode,IPointerEnterHandler,IPointerExitHandler
 
     public Dictionary<int, string> itemdata;
 
-
+    public Vector3 mousepos;
 
     public bool IsShowInfoWindow
     {
@@ -65,7 +68,8 @@ public class ItemNode : BaseNode,IPointerEnterHandler,IPointerExitHandler
             _isShowInfoWindow = value;
             if (value)
             {
-                ShowItemInfoWindow();
+                //아이템 정보 윈도우를 보여줄때는 현재 마우스의 위치를 함께 넘겨 준다.
+                ShowItemInfoWindow(Input.mousePosition+new Vector3(10,-10,0));
             }
             else
             {
@@ -99,20 +103,23 @@ public class ItemNode : BaseNode,IPointerEnterHandler,IPointerExitHandler
 
     }
 
-    public void ShowItemInfoWindow()
+    public void ShowItemInfoWindow(Vector3 pos)
     {
-
+        Debug.Log("패널 보여줌");
+        ItemNodeManager.Instance.getInfoPanel().ShowInfos(this,pos);
     }
 
     public void HideItemInfoWindow()
     {
-
+        Debug.Log("패널 안보여줌");
+        ItemNodeManager.Instance.getInfoPanel().HideInfos();
     }
 
     //마우스가 노드의 위에 들어오면 사용자가 설정한 시간만큼 0.1초씩 카운트를 한다.
     //마우스가 노드의 위에 설정한 시간만큼 올라와 있으면 그때 아이템 정보창을 출력한다.
     IEnumerator TimeCount()
     {
+        Debug.Log("마우스 카운팅 시작");
         float count = 0.0f;
 
         while(true)
@@ -139,7 +146,8 @@ public class ItemNode : BaseNode,IPointerEnterHandler,IPointerExitHandler
     public override void Awake()
     {
         base.Awake();
-        //stacktext = GetComponentInChildren<Text>();
+
+        //infopanel = GetComponentInParent<ItemInfoPanel>();
     }
 
     public override EnumTypes.ItemTypes GetItemTypes()
@@ -340,11 +348,15 @@ public class ItemNode : BaseNode,IPointerEnterHandler,IPointerExitHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        //mousepos = eventData.position;
+        Debug.Log("마우스 들어옴");
+        if(IsMouseOn==false)
+            IsMouseOn = true;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        if(IsMouseOn==true)
+            IsMouseOn = false;
     }
 }

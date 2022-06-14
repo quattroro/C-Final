@@ -296,12 +296,22 @@ MonoBehaviour:
   damage:
   - 0
   - 0
+  durability: 0
+  strrequire: 0
+  dexrequire: 0
+  price: 0
+  qurlitylevel: 0
+  grade: 0
   itemsize: {x: 0, y: 0}
-  _Stack: 0
-  _isstackable: 0
   itemtype: 0
   equiptype: 0
+  _Stack: 0
+  _isstackable: 0
+  _isShowInfoWindow: 0
+  _isMouseOn: 0
+  ShowInfoTime: 1
   stacktext: {fileID: 3097173648397137431}
+  mousepos: {x: 0, y: 0, z: 0}
 --- !u!1 &7962558302069381791
 GameObject:
   m_ObjectHideFlags: 0
