@@ -10,6 +10,8 @@ public class MouseInputManager : MonoBehaviour
 {
     GraphicRaycaster raycaster;
     public BaseNode ClickedObj;
+    public ItemNode LastOverlayNode;
+
 
     private void Awake()
     {
@@ -22,7 +24,7 @@ public class MouseInputManager : MonoBehaviour
 
     }
 
-
+    
     
 
     //현재 마우스의 위치에 현재 클릭된 노드의 크기만큼의 비어있는 슬롯이 있는지 확인한다.
@@ -406,6 +408,61 @@ public class MouseInputManager : MonoBehaviour
         
     }
 
+
+    public float lasttime = 0.0f;
+    //마우스가 UI 요소들 위에 올라와 있는지 확인한다.(0.1초에 한번씩 실행)
+    public void CheckMouseOveray()
+    {
+        if (Time.time - lasttime >= 0.1f)
+        {
+            lasttime = Time.time;
+            PointerEventData ped = new PointerEventData(null);
+            ped.position = Input.mousePosition;
+            List<RaycastResult> result = new List<RaycastResult>();
+            raycaster.Raycast(ped, result);
+            ItemNode node;
+
+
+            foreach (var a in result)
+            {
+                
+                if (a.gameObject.tag == "Node")//해당 위치에 노드가 있고 해당 노드가 슬롯에 셋팅되어 있는 노드면
+                {
+                    node = a.gameObject.GetComponent<ItemNode>();
+                    if(node.SettedSlotList.Count > 0)
+                    {
+                        if (node.IsMouseOn == false)//이미 정보를 보여주고 있었는지 여부를 확인하고
+                        {
+                            node.IsMouseOn = true;//아니라면 정보창을 보여준다.
+
+                            if (LastOverlayNode == null)
+                                LastOverlayNode = node;
+
+                            if (LastOverlayNode != node)//만약 이전에 정보를 보여주고 있던 노드가 있고 현재 보여주고 있는 노드와 다른 노드면 
+                            {
+                                LastOverlayNode.IsMouseOn = false;//이전 노드는 그만 보여주도록 해준다.
+                                LastOverlayNode = node;
+                            }
+
+
+                        }
+                        return;
+                    }
+                    
+                }
+
+            }
+
+            if(LastOverlayNode!=null)//현재 마우스 위치에 아무 노드도 없는데 아이템 정보를 보여주고 있는 노드가 있으면 그만 보여주도록 한다.
+            {
+                if (LastOverlayNode.IsMouseOn == true)
+                    LastOverlayNode.IsMouseOn = false;
+            }
+        }
+
+
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -414,10 +471,10 @@ public class MouseInputManager : MonoBehaviour
             LeftMouseDown(Input.mousePosition);
         }
 
-        //if (Input.GetMouseButtonUp(0))
-        //{
-        //    //LeftMouseUp(Input.mousePosition);
-        //}
+        if (Input.GetMouseButtonUp(0))
+        {
+            //LeftMouseUp(Input.mousePosition);
+        }
 
         if (Input.GetMouseButtonDown(1))
         {
@@ -433,5 +490,7 @@ public class MouseInputManager : MonoBehaviour
         {
             //DraggingItem(Input.mousePosition);
         }
+
+        CheckMouseOveray();
     }
 }

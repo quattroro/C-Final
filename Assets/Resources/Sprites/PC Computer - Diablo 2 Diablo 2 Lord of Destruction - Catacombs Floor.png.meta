@@ -1,0 +1,1770 @@
+fileFormatVersion: 2
+guid: 22073964e00681e47925298189d716e9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2594865341460847382
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_0
+  - first:
+      213: -1730694022388966856
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_1
+  - first:
+      213: -4807589297843279733
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_2
+  - first:
+      213: -7009110406904467216
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_3
+  - first:
+      213: 2854382380622007320
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_4
+  - first:
+      213: 8389316198738544698
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_5
+  - first:
+      213: -249730007716259530
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_6
+  - first:
+      213: -3053297145727967782
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_7
+  - first:
+      213: -8627995659242261015
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_8
+  - first:
+      213: -2490587708326671269
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_9
+  - first:
+      213: -5163807529997517677
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_10
+  - first:
+      213: 7675679227400835660
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_11
+  - first:
+      213: -6603076850772158218
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_12
+  - first:
+      213: -2160664144361495783
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_13
+  - first:
+      213: 2251247961987256245
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_14
+  - first:
+      213: 4637839452865376044
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_15
+  - first:
+      213: 6475187236067285424
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_16
+  - first:
+      213: -772665275242102284
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_17
+  - first:
+      213: 8270156680725953618
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_18
+  - first:
+      213: 2823827173028477385
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_19
+  - first:
+      213: -5591172186373181852
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_20
+  - first:
+      213: -5450950186768731853
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_21
+  - first:
+      213: 789025365816621539
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_22
+  - first:
+      213: -44997597225126097
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_23
+  - first:
+      213: -5268506938159110961
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_24
+  - first:
+      213: 4092636952782690297
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_25
+  - first:
+      213: 5471785969719013236
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_26
+  - first:
+      213: 2060961511201783440
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_27
+  - first:
+      213: -2966396312912764689
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_28
+  - first:
+      213: -4433833155571671937
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_29
+  - first:
+      213: 6016355333379641179
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_30
+  - first:
+      213: -8190435647520185135
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_31
+  - first:
+      213: 143628474276687943
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_32
+  - first:
+      213: -240584662208548014
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_33
+  - first:
+      213: -222798974444572676
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_34
+  - first:
+      213: 4420899665565182340
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_35
+  - first:
+      213: 4536010573730534544
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_36
+  - first:
+      213: 2573460625170103574
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_37
+  - first:
+      213: -1564004035062234863
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_38
+  - first:
+      213: 3295720748251761606
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_39
+  - first:
+      213: 241045426317828294
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_40
+  - first:
+      213: 6255775840294123715
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_41
+  - first:
+      213: 7988905032860862164
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_42
+  - first:
+      213: -5065360846274100769
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_43
+  - first:
+      213: -7713767807962723710
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_44
+  - first:
+      213: 8624866955851528505
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_45
+  - first:
+      213: -5764637932817158709
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_46
+  - first:
+      213: 2355339151985877890
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_47
+  - first:
+      213: 1900671713631017486
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_48
+  - first:
+      213: -6115355133630058249
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_49
+  - first:
+      213: -2495643134171480683
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_50
+  - first:
+      213: 564510357272812476
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_51
+  - first:
+      213: -4237115267210828078
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_52
+  - first:
+      213: -664490780444621695
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_53
+  - first:
+      213: -8970706811219696978
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_54
+  - first:
+      213: -7164208226399334276
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_55
+  - first:
+      213: -6881171049580534426
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_56
+  - first:
+      213: -4633762835693269748
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_57
+  - first:
+      213: 7534701355335541359
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_58
+  - first:
+      213: -1928948550106357066
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_59
+  - first:
+      213: -4634682838775461763
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_60
+  - first:
+      213: -1432387689155615889
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_61
+  - first:
+      213: 913450324333812376
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_62
+  - first:
+      213: -2528742491507829424
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_63
+  - first:
+      213: 1977081236379830317
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_64
+  - first:
+      213: -7241172599200374680
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_65
+  - first:
+      213: -6477728563492473398
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_66
+  - first:
+      213: -6487745586938515189
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_67
+  - first:
+      213: -6311746150282822835
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_68
+  - first:
+      213: -3439574375018574016
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_69
+  - first:
+      213: 3526058101773265056
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_70
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 80
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1133
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b1fb5a740d20420800000000000000
+      internalID: 2594865341460847382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1133
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a1d9cc4f65bf7e0800000000000000
+      internalID: -1730694022388966856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1133
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b88e41c5103084db0800000000000000
+      internalID: -4807589297843279733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1133
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f037f48833aabe90800000000000000
+      internalID: -7009110406904467216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1133
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ccb1ae6adcc9720800000000000000
+      internalID: 2854382380622007320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1053
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a38cd3e52a6dc6470800000000000000
+      internalID: 8389316198738544698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_6
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1053
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 639115091e7c88cf0800000000000000
+      internalID: -249730007716259530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_7
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1053
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: add9b2b4c6280a5d0800000000000000
+      internalID: -3053297145727967782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_8
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1053
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e5b04739a3334880800000000000000
+      internalID: -8627995659242261015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_9
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1053
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c0c3bcca7af6dd0800000000000000
+      internalID: -2490587708326671269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 973
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39cb20619687658b0800000000000000
+      internalID: -5163807529997517677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_11
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 973
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c42521ff69d758a60800000000000000
+      internalID: 7675679227400835660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_12
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 973
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f8de1db6982d54a0800000000000000
+      internalID: -6603076850772158218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_13
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 973
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 913e86c8867c302e0800000000000000
+      internalID: -2160664144361495783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_14
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 973
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bf8293081a0e3f10800000000000000
+      internalID: 2251247961987256245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 893
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2f2559f86aec5040800000000000000
+      internalID: 4637839452865376044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_16
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 893
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b91fe3fb7c7cd950800000000000000
+      internalID: 6475187236067285424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_17
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 893
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f14ae2a601f645f0800000000000000
+      internalID: -772665275242102284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_18
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 893
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c7e771faf75c270800000000000000
+      internalID: 8270156680725953618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_19
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 893
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c935734adf303720800000000000000
+      internalID: 2823827173028477385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 813
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46eae21158a2862b0800000000000000
+      internalID: -5591172186373181852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_21
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 813
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 331fc4d7fa55a54b0800000000000000
+      internalID: -5450950186768731853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_22
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 813
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e9b548c36e23fa00800000000000000
+      internalID: 789025365816621539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_23
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 813
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2776a97ce2206ff0800000000000000
+      internalID: -44997597225126097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_24
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 813
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc4685e7ad082e6b0800000000000000
+      internalID: -5268506938159110961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 733
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f7df35ff97fbc830800000000000000
+      internalID: 4092636952782690297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_26
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 733
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f61144950bfeb40800000000000000
+      internalID: 5471785969719013236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_27
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 733
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09e3fe233910a9c10800000000000000
+      internalID: 2060961511201783440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_28
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 733
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe06ec1254e35d6d0800000000000000
+      internalID: -2966396312912764689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_29
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 733
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7c1dc88c3cd772c0800000000000000
+      internalID: -4433833155571671937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 653
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5fce98bc436e7350800000000000000
+      internalID: 6016355333379641179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_31
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 653
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d4ecd16c2ab55e80800000000000000
+      internalID: -8190435647520185135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_32
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 653
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 740b4ec16554ef100800000000000000
+      internalID: 143628474276687943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_33
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 653
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 253f6ae368549acf0800000000000000
+      internalID: -240584662208548014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_34
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 653
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cffe8ef538578ecf0800000000000000
+      internalID: -222798974444572676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 573
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 489e7a9a2d03a5d30800000000000000
+      internalID: 4420899665565182340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 493
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 094df90859523fe30800000000000000
+      internalID: 4536010573730534544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_37
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 493
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61df7b6cdc4c6b320800000000000000
+      internalID: 2573460625170103574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_38
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 493
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11186d6dd9a8b4ae0800000000000000
+      internalID: -1564004035062234863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_39
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 493
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb4e6e1f80ccbd20800000000000000
+      internalID: 3295720748251761606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_40
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 493
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c02862c98d585300800000000000000
+      internalID: 241045426317828294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 413
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8b3337bfaf0d650800000000000000
+      internalID: 6255775840294123715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_42
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 413
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d68004ecca4ede60800000000000000
+      internalID: 7988905032860862164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_43
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 413
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd109a2d52934b9b0800000000000000
+      internalID: -5065360846274100769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_44
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 413
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ac9864c0133f490800000000000000
+      internalID: -7713767807962723710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_45
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 413
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 939f882cccea1b770800000000000000
+      internalID: 8624866955851528505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 326
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcde0bba754efffa0800000000000000
+      internalID: -5764637932817158709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_47
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 326
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28320b7ca78dfa020800000000000000
+      internalID: 2355339151985877890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_48
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 326
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a1c957ada806a10800000000000000
+      internalID: 1900671713631017486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_49
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 326
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f07e9018e4e12ba0800000000000000
+      internalID: -6115355133630058249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_50
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 326
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59df09dbac1bd5dd0800000000000000
+      internalID: -2495643134171480683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_51
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 246
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb5645dd2b85d700800000000000000
+      internalID: 564510357272812476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_52
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 246
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6a3891d1eb235c0800000000000000
+      internalID: -4237115267210828078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_53
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 246
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1848313e72147c6f0800000000000000
+      internalID: -664490780444621695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_54
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 246
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea2a21d1fa5a18380800000000000000
+      internalID: -8970706811219696978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_55
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 246
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c705980639e939c90800000000000000
+      internalID: -7164208226399334276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 166
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 665ec0f636b2180a0800000000000000
+      internalID: -6881171049580534426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_57
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 166
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d881d604191bfb0800000000000000
+      internalID: -4633762835693269748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_58
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 166
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f62ed6d46f2a09860800000000000000
+      internalID: 7534701355335541359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_59
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 166
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b2e7e0838ffa35e0800000000000000
+      internalID: -1928948550106357066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_60
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 173
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d788034838c4eafb0800000000000000
+      internalID: -4634682838775461763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_61
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f63ac3f5cf22f1ce0800000000000000
+      internalID: -1432387689155615889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_62
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 80
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ad1e5fa3a3dac00800000000000000
+      internalID: 913450324333812376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_63
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 80
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0555d311a1a18ecd0800000000000000
+      internalID: -2528742491507829424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_64
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 80
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d288282d8e0007b10800000000000000
+      internalID: 1977081236379830317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_65
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 80
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860ae5be2ef228b90800000000000000
+      internalID: -7241172599200374680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac531a5213c7a16a0800000000000000
+      internalID: -6477728563492473398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_67
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b01fb6123c5e6f5a0800000000000000
+      internalID: -6487745586938515189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Catacombs Floor_68
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4bf3ff315c2868a0800000000000000
+      internalID: -6311746150282822835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

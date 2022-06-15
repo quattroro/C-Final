@@ -348,15 +348,15 @@ public class ItemNode : BaseNode,IPointerEnterHandler,IPointerExitHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        //mousepos = eventData.position;
-        Debug.Log("마우스 들어옴");
-        if(IsMouseOn==false)
-            IsMouseOn = true;
+        ////mousepos = eventData.position;
+        //Debug.Log("마우스 들어옴");
+        //if(IsMouseOn==false)
+        //    IsMouseOn = true;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if(IsMouseOn==true)
-            IsMouseOn = false;
+        //if(IsMouseOn==true)
+        //    IsMouseOn = false;
     }
 }
